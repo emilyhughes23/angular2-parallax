@@ -1,0 +1,76 @@
+html {
+  overflow: hidden;
+  height:100%;
+}
+span {
+  float:right;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin:0;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  -webkit-perspective: 1px;
+  perspective: 1px;
+}
+.parallax-group {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+img {
+  width:100%;
+}
+.back {
+  transform: translateZ(-1px) scale(2.1);
+  position: relative;
+  top: 300;
+}
+
+.front {
+  position: relative;
+  background-color: #111111;
+  color: white;
+  padding: 14em 1em;
+  padding-right: 25em;
+  z-index: 2;
+  -webkit-transform: translateZ(0) scale(1.1);
+  transform: translateZ(0) scale(1.1);
+}
+
+.title {
+    -webkit-transform: translateZ(-0.5px) scale(1.5);
+  transform: translateZ(-0.5px) scale(1.5);
+  position: absolute;
+  top: 12em;
+  color: white;
+  text-align: left;
+  left:10em;
+  width:100%;
+  font-family: Helvetica, sans-serif;
+}
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}

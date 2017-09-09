@@ -1,0 +1,23 @@
+<html>
+<head>  
+</head>
+<body>
+<div class="parallax-group">
+  <img class="back" src="../../assets/images/trippy.jpg" alt="">
+  <div class="title">
+    <h1>Title</h1>
+    <h2>Subtitle</h2>
+  </div>
+  <div class="front">
+    <app-about></app-about>
+      </div>
+      <img class="back" src="../../assets/images/trippy-2.jpg" alt="">
+      <div class="front">
+              <span class="glyphicon glyphicon-menu-right" (click)="changeShowStatus()"></span>
+               <app-about *ngIf="showHide"></app-about>
+               <app-experience *ngIf="showHide2"></app-experience>
+      </div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,21 @@
+h2 {
+    font-family: Helvetica, sans-serif;
+}
+p {
+    font-family: Helvetica, sans-serif;
+    padding-right: 10%;
+}
+
+.container {
+      left:25em;
+      margin-left: 10%;
+      margin-right: 10%;
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
